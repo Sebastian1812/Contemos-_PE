@@ -164,10 +164,15 @@ void menu(ALLEGRO_DISPLAY*ventana)
 			{
 				x = evento.mouse.x;
 				y = evento.mouse.y;
-				if (evento.mouse.button & 1)
+				if (x >= 811 && x <= 942 && y >= 522 && y <= 604)
 				{
-					printf("x: %d y: %d\n", x, y);
-				}
+					al_draw_bitmap(tutorial_1, 0, 0, 0);
+					if (evento.mouse.button & 1)
+					{
+						al_draw_bitmap(tutorial_2, 0, 0, 0);
+						printf("Termino el tutorial\n");
+					}
+				}				
 			}
 		}
 
